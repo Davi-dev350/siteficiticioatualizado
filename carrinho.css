@@ -1,0 +1,139 @@
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  /* Estilo do corpo */
+  body {
+    font-family: Arial, sans-serif;
+    background-color: #f8f8f8;
+    color: #333;
+  }
+  
+  /* Cabeçalho */
+  header {
+    background-color: #222;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+  }
+  
+  /* Container do carrinho */
+  .carrinho {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    padding: 20px;
+    max-width: 1200px;
+    margin: 20px auto;
+  }
+  
+  /* Cada item do carrinho */
+  .item {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  }
+  
+  /* Imagem do produto */
+  .item img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    display: block;
+  }
+  
+  /* Detalhes do produto */
+  .detalhes {
+    padding: 15px;
+  }
+  
+  .detalhes h2 {
+    font-size: 18px;
+    margin-bottom: 10px;
+  }
+  
+  .detalhes p {
+    margin-bottom: 8px;
+    font-size: 16px;
+  }
+  
+  /* Seção de total e botão de finalizar */
+  .total {
+    grid-column: 1 / -1;
+    background-color: #fff;
+    border-top: 1px solid #ddd;
+    padding: 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .total strong {
+    font-size: 18px;
+  }
+  
+  /* Botão finalizar compra */
+  .finalizar {
+    background-color: #2e7d32;
+    color: #fff;
+    text-decoration: none;
+    padding: 10px 15px;
+    border-radius: 4px;
+    transition: background-color 0.3s;
+  }
+  
+  .finalizar:hover {
+    background-color: #1b5e20;
+  }
+  
+  /* Formas de Pagamento */
+  .formas-pagamento {
+    grid-column: 1 / -1;
+    background-color: #fff;
+    padding: 20px;
+    text-align: center;
+    border-top: 1px solid #ddd;
+  }
+  
+  .formas-pagamento h3 {
+    font-size: 18px;
+    margin-bottom: 15px;
+  }
+  
+  .formas-pagamento .bandeiras {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+  }
+  
+  .formas-pagamento .bandeiras img {
+    width: 50px;
+    height: auto;
+    object-fit: contain;
+  }
+  
+  /* Responsividade */
+  @media (max-width: 768px) {
+    .total,
+    .formas-pagamento {
+      flex-direction: column;
+      text-align: center;
+    }
+  
+    .total {
+      display: flex;
+      gap: 10px;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .carrinho {
+      grid-template-columns: 1fr;
+    }
+  }
